@@ -1,0 +1,116 @@
+/*Variables*/
+:root{
+    /*Width and height*/
+    --ancho-panel: 88vw;
+    --alto-panel: 60vh;
+    --ancho-panel-element: 15rem;
+
+    /*Background-color*/
+    --back-panel-element: #FDD401;
+
+    /*Font-size*/
+    --font-size-h1: 12vw;
+}
+
+/*Estilos generales*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.6rem;
+    background-color: Black;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Utilidades*/
+.d-flex{
+    display: flex;
+}
+.f-direc-col{
+    flex-direction: column;
+}
+.f-direc-row{
+    flex-direction: row;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.flex-just-sb{
+    justify-content: space-between;
+}
+.flex-just-sa{
+    justify-content: space-around;
+}
+.flex-align-center{
+    align-items: center;
+}
+.txt-center{
+    text-align: center;
+}
+
+/*Estilos header*/
+.header{
+    position: relative;
+    height: 100vh;
+    padding: 0 2.5rem;
+    padding-top: 3rem;
+    background-image: url(../assets/images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header__info{
+    margin-top: 10rem;
+}
+.header__title{
+    font-size: var(--font-size-h1);
+    letter-spacing: .7rem;
+    color: white;
+}
+.header__arrow{
+    margin-top: 6.5rem;
+}
+.nav__hamb{
+    cursor: pointer;
+}
+.panel{
+    position: absolute;
+    left: calc((100% - var(--ancho-panel)) / 2);
+    top: calc(((100% - var(--alto-panel)) / 2) - 3rem);
+    padding: 3rem 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--ancho-panel);
+    height: var(--alto-panel);
+    background-color: white;
+    transition: all .2s ease-in-out;
+}
+.panel--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.panel__element{
+    flex-basis: calc(100% / 4 - 1rem);
+    width: var(--ancho-panel-element);
+    border-radius: 4rem;
+    transition: all .2s ease-in-out;
+}
+.panel__element:hover{
+    font-weight: bold;
+    background-color: var(--back-panel-element);
+}
